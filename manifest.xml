@@ -1,0 +1,19 @@
+<package>
+  <description brief="Component for range sensor">
+  for the range sensor
+  </description>
+  <author>eduardo.elael@13robotics.com/eduardo.elael@13robotics.com</author>
+  <license></license>
+  <url>http://</url>
+  <logo>http://</logo>
+  <depend package="base/cmake" />
+  <!--
+   To add any dependencies use the depend tag
+  <depend package="dummy-dependency-0" />
+	...
+  <depend package="dummy-dependency-n-1" />
+  <depend package="dummy-dependency-n" />
+  -->
+  <depend package="drivers/range_sensor_micro_epsilon" />
+  <depend package="base/types" />
+</package>
