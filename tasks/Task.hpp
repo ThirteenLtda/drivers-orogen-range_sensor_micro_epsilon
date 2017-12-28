@@ -4,6 +4,7 @@
 #define RANGE_SENSOR_MICRO_EPSILON_TASK_TASK_HPP
 
 #include "range_sensor_micro_epsilon/TaskBase.hpp"
+#include <range_sensor_micro_epsilon/Driver.hpp>
 
 namespace range_sensor_micro_epsilon{
 
@@ -28,7 +29,9 @@ tasks/Task.cpp, and will be put in the range_sensor_micro_epsilon namespace.
     {
 	friend class TaskBase;
     protected:
-
+        void processIO();
+        
+        RangeSensor* mDriver;
 
 
     public:
@@ -41,7 +44,7 @@ tasks/Task.cpp, and will be put in the range_sensor_micro_epsilon namespace.
         /** TaskContext constructor for Task
          * \param name Name of the task. This name needs to be unique to make it identifiable for nameservices.
          * \param engine The RTT Execution engine to be used for this task, which serialises the execution of all commands, programs, state machines and incoming events for a task.
-         * 
+         *
          */
         Task(std::string const& name, RTT::ExecutionEngine* engine);
 
@@ -110,4 +113,3 @@ tasks/Task.cpp, and will be put in the range_sensor_micro_epsilon namespace.
 }
 
 #endif
-
